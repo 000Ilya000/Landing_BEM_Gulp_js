@@ -1,0 +1,14 @@
+{
+  "name": "landing_bem_gulp_js",
+  "version": "1.0.0",
+  "description": "Небальшой лендинг с использованием методологии БЭМ и Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
