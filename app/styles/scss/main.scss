@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Roboto-Bold"; /* Название шрифта */
+  src: url("../../fonts/Roboto-Bold.woff2") format("truetype"); /* Путь к файлу шрифта */
+  font-weight: normal; /* Нормальный вес шрифта */
+  font-style: normal; /* Нормальный стиль шрифта */
+}
+
+@font-face {
+  font-family: "Roboto-Regular"; /* Название шрифта */
+  src: url("../../fonts/Roboto-Regular.woff2") format("truetype"); /* Путь к файлу шрифта */
+  font-weight: normal; /* Нормальный вес шрифта */
+  font-style: normal; /* Нормальный стиль шрифта */
+}
+
+// обнуление стилей!!
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+// обнуление стилей!!
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bgGrad {
+  background-image: url(../../images/mainbg.avif);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 117px;
+}
+
+.menu {
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: space-between;
+  .menu__list {
+    display: flex;
+    gap: 70px;
+    font-family: "Roboto-Regular";
+    .menu__list-item {
+      font-size: 17px;
+      line-height: 150%;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .menu__button {
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    line-height: 150%;
+    color: white;
+    padding: 15px 55px;
+    background-color: #f44e77;
+    border-radius: 20px;
+  }
+}
