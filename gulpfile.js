@@ -31,7 +31,7 @@ function fonts() {
 function images() {
   return src(["app/images/src/*.*", "!app/images/src/*.svg"]) //обращается ко всем картинкам кроме svg
     .pipe(newer("app/images/src/*.*"))
-    .pipe(avif({ quality: 75 })) // обрабатываем и сжимаем изображения в avif
+    .pipe(avif({ quality: 90 })) // обрабатываем и сжимаем изображения в avif
     .pipe(imagemin()) // минифицируем изображения из оригинальной пачки
     .pipe(dest("app/images")); // выкладываем все в dist
 }

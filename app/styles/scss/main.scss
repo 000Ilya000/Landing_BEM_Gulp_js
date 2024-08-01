@@ -138,13 +138,14 @@ legend {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 120svh;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1100px;
+  max-width: 70svw;
   gap: 117px;
 }
 
@@ -153,24 +154,127 @@ legend {
   margin-top: 80px;
   align-items: center;
   justify-content: space-between;
-  .menu__list {
-    display: flex;
-    gap: 70px;
-    font-family: "Roboto-Regular";
-    .menu__list-item {
-      font-size: 17px;
-      line-height: 150%;
-      color: white;
-      cursor: pointer;
+}
+
+.menu__list {
+  display: flex;
+  gap: 70px;
+  font-family: "Roboto-Regular";
+}
+
+.menu__logo {
+  transition: 3s ease; /* добавлено для анимации */
+  width: 48px;
+}
+
+.menu__logo--active {
+  width: 200px;
+}
+
+.menu__list-item {
+  font-size: 17px;
+  line-height: 150%;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  &::after {
+    content: "";
+    position: absolute; /* позиционирование псевдоэлемента */
+    left: 0; /* выравнивание по левому краю родителя */
+    bottom: -1px; /* позиционирование под родителем */
+    width: 0%; /* начальная ширина 0 */
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    transition: width 0.3s ease; /* добавлено для анимации */
+    opacity: 0%;
+  }
+  position: relative; /* добавлено для позиционирования псевдоэлемента */
+  &:hover {
+    &::after {
+      opacity: 100%;
+      width: 100%;
     }
   }
-  .menu__button {
-    font-family: "Roboto-Regular";
-    font-size: 17px;
-    line-height: 150%;
-    color: white;
-    padding: 15px 55px;
-    background-color: #f44e77;
-    border-radius: 20px;
+}
+
+.menu__button {
+  font-family: "Roboto-Regular";
+  font-size: 17px;
+  line-height: 150%;
+  color: white;
+  padding: 15px 55px;
+  background-color: #f44e77;
+  transition: 0.3s ease; /* добавлено для анимации */
+  border-radius: 20px;
+  &:hover {
+    background-color: #eb2053;
   }
+  z-index: 1;
+}
+
+.blockTexImg {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.blockTextButton {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.blockText {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  max-width: 400px;
+}
+
+.blockTexImg__img {
+  position: absolute;
+  max-height: 95svh;
+  right: -10%;
+  top: -50%;
+  z-index: 0;
+}
+
+.whiteColor {
+  color: white !important;
+}
+
+.blockTexImg__title {
+  font-family: "Roboto-Bold";
+  font-size: 60px;
+  line-height: 150%;
+  transition: 3s ease; /* добавлено для анимации */
+  color: rgb(0, 0, 0);
+}
+
+.blockTextImg__text {
+  font-family: "Roboto-Regular";
+  font-size: 20px;
+  line-height: 150%;
+  transition: 1.5s ease; /* добавлено для анимации */
+  color: rgb(0, 0, 0);
+}
+
+.blockTextButton__button {
+  font-family: "Roboto-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  color: white;
+  background-color: #16194f;
+  transition: 0.3s ease; /* добавлено для анимации */
+  &:hover {
+    background-color: #232779;
+  }
+  border-radius: 20px;
+  max-width: 200px;
+  padding: 13px 37px;
 }
